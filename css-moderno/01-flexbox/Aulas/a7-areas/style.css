@@ -3,13 +3,13 @@ body {
     color: #fff;
     font-family: Arial, sans-serif;
     text-align: center;
+    padding: 0.5rem;
+    min-height: 100vh;
+    
 }
 
 .grid-container {
     margin: 0 auto;
-    min-height: 36rem;
-    width: 64rem;
-
     display: grid;
     gap: 1rem;
 
@@ -46,4 +46,5 @@ body {
 .footer {
     grid-area: rodape;
     background-color: #4f9849;
+    margin-top: 1rem;
 }
