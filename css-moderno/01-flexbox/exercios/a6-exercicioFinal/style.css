@@ -1,0 +1,257 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --Fundo-branco:  #ffffff;
+    --Fundo-claro:   #e0e0e0;
+    --Cor-principal: #6c63ff;
+    --Fundo-escuro:  #2c2c2e;
+    --Fundo-preto:   #070707;
+
+    --color-primary: var(var(--Cor-principal));
+    --colo-background: var(var(--Fundo-claro));
+    --color-bacground-black: var(var(--Fundo-escuro));
+    --color-card-background: var(var(--Fundo-branco));
+
+}
+
+body {
+    background-color: var(--Fundo-claro);
+    color: var(--Fundo-preto);
+    line-height: 1.6;
+    
+}
+
+.hero {
+    background: linear-gradient(to bottom right, rgba(0,0,0,0.1), rgba(0,0,0,0.8)), url("images/pexels-bertellifotografia-3321797.jpg");
+    background-position: center;
+    background-size: cover;
+    color: var(--Fundo-branco);
+    height: 100vh;
+    text-align: center;
+    padding: 1.5rem;
+    display: grid;
+    place-content: center;
+    width: 100%;
+    
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    background-color: var(--Cor-principal);
+    border: none;
+    border-radius: .5rem;
+    color: var(--Fundo-branco);
+    display: inline-block;
+    padding: .75rem 1.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #6200b3;
+}
+
+.speakers {
+    padding: 3rem 1.5rem;
+
+}
+
+.speakers h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.speakers-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+}
+
+.speaker-card {
+    background-color: var(--Fundo-branco);
+    border-radius: .75rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.speaker-card > img {
+    border-radius: 50%;
+    height: auto;
+    width: 100%;
+    max-width: 10rem;
+    margin-bottom: 0.75rem;
+}
+
+.speaker-card h3 {
+    margin-bottom: 1.5rem;
+}
+
+.schedule {
+    padding: 3rem 1.5rem;
+
+}
+
+.schedule h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+} 
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 1;
+    gap: 1.5rem;
+
+}
+
+.schedule-item {
+    background-color: var(--Fundo-branco);
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+}
+
+.schedule-item h3 {
+    margin-bottom: 1rem;
+}
+
+.newsletter {
+    padding: 3rem 1.5rem;
+}
+
+.newsletter-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.newsletter-text {
+    text-align: center;
+}
+
+.newsletter-text h2 {
+    font-size: 2rem;
+    margin-bottom: .75rem;
+}
+
+.newsletter-text p {
+    color: #888888;
+    margin-bottom: 1.5rem;
+    
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    background-color: var(--Fundo-claro);
+    border: 1px solid #888888;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 32rem;
+    padding: .5rem;
+
+}
+
+.newsletter-image {
+    text-align: center;
+}
+
+.newsletter-image img {
+    height: auto;
+    max-width: 75%;
+}
+
+.footer {
+    padding: 1.75rem;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 1.5rem;
+}
+
+
+@media screen and (min-width: 48rem) {
+    .hero h1 {
+        font-size: 3rem;
+
+    }
+
+    .speakers-grid {
+        grid-template-columns: repeat(3, 1fr) ;
+    }
+
+    .schedule-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletter-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletter-text {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .hero,.schedule,.speakers, .newsletter {
+        padding: 6rem;
+    }
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --Fundo-branco:  #070707; 
+    --Fundo-claro:   #2c2c2e;  
+    --Cor-principal: #6c63ff;
+    --Fundo-escuro:  #2c2c2e;
+    --Fundo-preto:   #ffffff; 
+
+    
+    }
+
+    .hero {
+        color: #fff;
+    }
+
+    .speaker-card {
+        background-color: #000036b5;
+    }
+
+    .schedule-item {
+        background-color: #000036b5;
+    }
+
+    .btn:hover {
+        background-color: #000036;
+        color: #fff;
+    }
+
+}
