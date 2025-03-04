@@ -1,0 +1,21 @@
+{
+  "name": "a3-instalar-viti",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.85.1",
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3"
+  }
+}
