@@ -1,5 +1,16 @@
 {
+  "name": "a4-sass",
+  "version": "1.0.0",
+  "description": "Aprendendo Sass",
+  "main": "index.js",
+  "scripts": {
+    "compiler:sass": "sass --watch ./scss/styles.scss:./styles/styles.css",
+    "dev": "vite"
+  },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "sass": "^1.85.1"
+    "sass": "^1.85.1",
+    "vite": "^6.2.2"
   }
 }
