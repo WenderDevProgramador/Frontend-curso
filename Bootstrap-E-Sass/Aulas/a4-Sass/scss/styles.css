@@ -1,0 +1,83 @@
+.btn {
+  background-color: #fafafa;
+  color: #232323;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  transition: 0.15s;
+}
+.btn:hover {
+  background-color: #c8c8c8;
+}
+.btn.btn-primary {
+  background-color: #5f4fff;
+  color: #fafafa;
+}
+.btn.btn-primary:hover {
+  background-color: rgb(34.2727272727, 12.2, 255);
+}
+.btn.btn-secondary {
+  background-color: #ff9f00;
+  color: #232323;
+}
+.btn.btn-secondary:hover {
+  background-color: rgb(204, 127.2, 0);
+}
+.btn.btn-success {
+  background-color: #3eff7e;
+  color: #232323;
+}
+.btn.btn-success:hover {
+  background-color: rgb(0, 253.6, 84.0953367876);
+}
+.btn.btn-danger {
+  background-color: #ff3e3e;
+  color: #232323;
+}
+.btn.btn-danger:hover {
+  background-color: rgb(253.6, 0, 0);
+}
+
+.form-inline {
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  gap: 1rem;
+}
+.form-inline label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-inline input {
+  border: none;
+  border-radius: 0.25rem;
+  display: block;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+section {
+  padding: 1rem;
+}
+
+.container {
+  padding: 1rem 5rem;
+}
+.container p {
+  margin-top: 2rem;
+}
+
+body {
+  background-color: #232323;
+  color: #fafafa;
+  font-family: sans-serif;
+}
+
+p {
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,16 @@
+{
+  "name": "a4-sass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/styles.scss:./scss/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.86.0",
+    "vite": "^6.2.2"
+  }
+}
