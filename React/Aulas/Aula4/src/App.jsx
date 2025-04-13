@@ -1,17 +1,22 @@
-function sum(a,b) {
+import Title from "./Componets/Title"
+import { Subtitle } from "./Componets/Subtitle"
+import StatusText from "./Componets/StatusText"
+import styles from './App.module.css'
+
+function sum(a, b) {
   return a + b
 }
 
+
+
 export default function App() {
 
-  const tech = 'Bem vindo'
-  const status =  true
-
   return (
-    <div>
-      <h1>{tech} ao curso de React</h1>
-      <h2>É facil como 1+2  é {sum(1,2)}</h2>
-      <h2>Current status: {status ? 'on' : 'off'}</h2>
+    <div className={styles.app}>
+
+      <Title />
+      <Subtitle />
+      <StatusText />
       <p>{true && 'Text'}</p>
     </div>
   )
