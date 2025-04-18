@@ -1,21 +1,46 @@
+import Title from '../Title'
+import ProfileSection from './ProfileSection'
 import styles from './styles.module.css'
+import LinkButton from '../LinkButton'
+import { useState } from 'react'
 
 
 export default function Profile(props) {
+    const [followText, setFollowText] = useState('Follow')
     return (
         <div className={styles.container}>
             <img className={styles.avatar} src={props.avatar} alt={props.name} />
-            <h2>{props.name}</h2>
-            <div>{props.bio}</div>
-            <div>{props.phone}</div>
-            <div>{props.email}</div>
-            <div className={styles.link}>
-                <a href={props.githubUrl} target="_blank">GitHub</a>
+            <Title>
+                <span>{props.name}</span>
+                <button className={styles.button}
+                
+                onClick={() => {
+                    
+                    alert(`Você agora está seguindo ${props.name}!`)
 
-                <a href={props.linkedInUrl} target="_blank">LinkedIn</a>
+                    setFollowText('Following')
 
-                <a href={props.twitterUrl} target="_blank">Twitter</a>
-            </div>
+                }}
+
+                >{followText}</button>
+            </Title>
+
+
+            <ProfileSection>{props.bio}</ProfileSection>
+            <ProfileSection>{props.phone}</ProfileSection>
+            <ProfileSection>{props.email}</ProfileSection>
+            <ProfileSection 
+            className={styles.links}
+            id='links-section'
+            data-test='some value'
+            aria-label='social links'
+            >
+
+                <LinkButton href={props.githubUrl} >GitHub</LinkButton>
+                <LinkButton href={props.linkedInUrl} >LinkedIn</LinkButton>
+                <LinkButton href={props.twitterUrl} >Twitter</LinkButton>
+            </ProfileSection>
+
 
         </div>
     )
