@@ -18,6 +18,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -25,9 +26,14 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  place-items: start;
+  padding: 0 4rem;
+  text-align: center;
 }
 
 h1 {
@@ -46,25 +52,123 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+form {
+  display: flex;
+  align-items: end;
+  gap: 2rem;
+}
 
+input, button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  margin: 1rem 0 0;
+  display: block;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  transition: border-color 0.25s;
+}
 
+.games {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.games>div {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+  height: 8rem;
+  margin-top: 2rem;
+  width: 28rem;
+}
+
+.games img {
+  height: 100%;
+  width: 10rem;
+  object-fit: cover;
+}
+
+.games h2 {
+  margin: 0;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer p {
+  font-size: 0.5rem;
+}
+/* Estilos para o modo claro */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
-  button {
+
+  button,
+  input {
     background-color: #f9f9f9;
   }
+}
+
+/* RESPONSIVIDADE: telas menores que 768px */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+    place-items: center;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .games {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .games>div {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+  }
+
+  .games img {
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    max-width: 250px;
+  }
+
+
 }
