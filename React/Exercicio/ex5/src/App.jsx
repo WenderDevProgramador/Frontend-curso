@@ -82,12 +82,12 @@ games.forEach(game => {
 
 export default function App() {
   return (
-    <div style={{ padding: "0 4rem 4rem" }}>
+    <div className="central" >
       <h1>Meus Jogos</h1>
-      <div style={{ display: "flex",flexDirection: 'column', flexWrap: "wrap", alignItems: 'center', justifyContent:'center', gap: "4rem" }}>
+      <div className="central mestre" >
         {games.map((game) => {
           return (
-            <div>
+            <div key={game.id} className="central">
               <img 
                 src={game.coverImage}
                 alt={game.title}
