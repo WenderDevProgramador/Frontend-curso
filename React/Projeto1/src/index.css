@@ -79,11 +79,13 @@ input, button {
   font-family: inherit;
   background-color: #1a1a1a;
   transition: border-color 0.25s;
+  
 }
 
 .games {
   display: flex;
   flex-wrap: wrap;
+  padding: 1rem;
 }
 
 .games>div {
@@ -103,6 +105,15 @@ input, button {
 
 .games h2 {
   margin: 0;
+}
+
+.recado {
+  text-align: center;
+  
+}
+
+.recado h2 {
+  font-size: 1rem;
 }
 
 .footer {
@@ -141,6 +152,8 @@ input, button {
   h1 {
     font-size: 1.5rem;
   }
+
+  
 
   form {
     flex-direction: column;
