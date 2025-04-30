@@ -1,0 +1,88 @@
+// src/styles/custom.scss
+
+// Variáveis personalizadas
+$primary-color: #0062cc;
+$accent-color: #28a745;
+$dark-bg: #121212;
+$light-bg: #f8f9fa;
+$text-color: #212529;
+$radius: 12px;
+
+// Sobrescreve Bootstrap
+body {
+    background-color: $light-bg;
+    font-family: 'Segoe UI', sans-serif;
+    color: $text-color;
+    line-height: 1.6;
+}
+
+// Navbar customizada
+.navbar {
+    background: linear-gradient(90deg, $primary-color, darken($primary-color, 10%));
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+    .nav-link {
+        font-weight: 500;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: -4px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+
+        &:hover:after {
+            width: 100%;
+        }
+    }
+}
+
+// Cards
+.card {
+    border: none;
+    border-radius: $radius;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-body {
+        padding: 2rem;
+    }
+}
+
+// Botões
+.btn-outline-primary,
+.btn-outline-success {
+    border-radius: $radius;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: $primary-color;
+        color: white;
+    }
+}
+
+// Footer
+footer {
+    background-color: $dark-bg;
+    color: #ccc;
+
+    a {
+        color: $accent-color;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
