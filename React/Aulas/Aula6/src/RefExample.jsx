@@ -7,11 +7,14 @@ export default function RefExample() {
         inputRef.current.focus()
         inputRef.current.style.backgroundColor = '#f64348'
 
+
     }
+
+    inputRef.current.style.backgroundColor = '#000'
     return (
         <div>
             <input ref={inputRef} type="text" />
-            <button  onClick={handleClick}>Focar no Input</button>
+            <button onClick={handleClick}>Focar no Input</button>
         </div>
     )
 }
