@@ -1,28 +1,32 @@
-import { createBrowserRouter  } from 'react-router-dom'
-import Home from './pages/Home'
-import Products from './pages/Products'
-import Cart from './pages/Cart'
-import Admin from './pages/Admin'
+import { createBrowserRouter } from 'react-router-dom';
+
+import Cart from "./pages/Cart";
+import Product from "./pages/Product";
+import Products from './pages/Products';
+import Admin from './pages/Admin';
+import RootLayout from './pages/RootLayout';
+
 
 
 const router = createBrowserRouter([
     {
-        path: '/',
-        element: <Home/>
-    },
-    {
-        path: '/products',
-        element: <Products/>
-    },
-    {
-        path: '/cart',
-        element: <Cart/>
-    },
-    {
-        path:'/admin',
-        element: <Admin/>
+        path: "/",
+        element: <RootLayout />,
+        children: [{
+            path: "products",
+            element: <Products />
+        }, {
+            path: "products/:productId",
+            element: <Product />
+        }, {
+            path: "cart",
+            element: <Cart />
+        },
+        {
+            path: "/admin",
+            element: <Admin />
+        }]
     }
-
 ])
 
-export default router
+export default router;
