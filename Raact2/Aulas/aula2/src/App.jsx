@@ -4,6 +4,7 @@ import MyComponent from "./components/MyComponent.jsx"
 import TempleteExpression from "./components/TemplateExpression.jsx"
 // Importando componente 
 //Hierarquia de componentes
+//Função de renderização
 
 function App() {
   const name = 'Wender'
@@ -12,6 +13,8 @@ function App() {
     age: 30,
     job: 'Programador'
   }
+
+  
   
 
   return (
