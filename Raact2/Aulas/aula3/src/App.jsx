@@ -5,6 +5,12 @@ import ListRender from './component/ListRender'
 import ConditionalRender from './component/ConditionalRender'
 import ShowUserName from './component/ShowUserName'
 import CardDetails from './component/CardDetails'
+import Fragment from './component/Fragment'
+import Container from './component/Container'
+import PropFunction from './component/PropFunction'
+import { useState } from 'react'
+import Message from './component/Message'
+import ChangerMessage from './component/ChangerMessage'
 
 const cars = [
   { id: 1, brand: 'Toyota', color: 'Prata', km: 52000 },
@@ -21,30 +27,54 @@ const cars = [
 
 
 function App() {
-  
+
+  const [message, setMessage] = useState('')
+
+  const handleMessage = (msg) => setMessage(msg)
+
+
+  function showAlert() {
+    alert('Executado')
+  }
+
   return (
     <div className='App'>
       <h1>Aula 3</h1>
       <h2>IMG</h2>
-      <Img/>
+      <Img />
       <h2>Hooks</h2>
       <h2>useState</h2>
-      <Data/>
+      <Data />
       <h2>Renderização de listas</h2>
-      <ListRender/>
-      <ConditionalRender/>
-      <ShowUserName name= 'Wender'/>
-      <CardDetails brand='VW' km={909} color='Vermelho'/>
+      <ListRender />
+      <ConditionalRender />
+      <ShowUserName name='Wender' />
+      <CardDetails brand='VW' km={909} color='Vermelho' />
       {/* Reaproveitando componentes */}
-      <CardDetails brand='GM' km={956} color='Branco'/>
-      <CardDetails brand='Fiat' km={1009} color='Vermelho'/>
-      <CardDetails brand='VW' km={8589} color='Preto'/>
+      <CardDetails brand='GM' km={956} color='Branco' />
+      <CardDetails brand='Fiat' km={1009} color='Vermelho' />
+      <CardDetails brand='VW' km={8589} color='Preto' />
 
       {/* Renderização de listas com componentes */}
       {cars.map((car) => (
-        <CardDetails key={car.id} brand={car.brand} color={car.color} km={car.km}/>
+        <CardDetails key={car.id} brand={car.brand} color={car.color} km={car.km} />
       ))}
 
+      {/* Usando o Fragment */}
+      <Fragment />
+      {/* Children */}
+      <Container>
+        <h2>Titulo</h2>
+        <p>Alguma coisa</p>
+      </Container>
+      {/* Prop com função */}
+
+      < PropFunction myFunction={showAlert} />
+
+      {/* Elevação de state */}
+      {/* state lift */}
+      <Message msg={message} />
+      <ChangerMessage handleMessage={handleMessage}/>
     </div>
   )
 }
