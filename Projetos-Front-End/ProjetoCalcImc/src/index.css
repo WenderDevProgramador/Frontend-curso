@@ -45,7 +45,6 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  margin-bottom: 0.2rem;
 }
 button:hover {
   border-color: #646cff;
@@ -53,20 +52,6 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-/* Classe dinamica */
-
-.red-title {
-  font-size: 50px;
-  color: red;
-  background-color: #000;
-}
-
-.blue-title {
-  font-size: 50px;
-  color: blue;
-  background-color: #fff;
 }
 
 @media (prefers-color-scheme: light) {
