@@ -11,6 +11,7 @@ button {
 
 button:hover {
     opacity: 1;
+    color: #707070;
 }
 
 #clear-btn {
