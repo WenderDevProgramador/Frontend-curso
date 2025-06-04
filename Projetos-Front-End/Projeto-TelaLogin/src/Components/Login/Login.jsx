@@ -16,7 +16,7 @@ const Login = () => {
         <div className="container">
             <form onSubmit={handleSubmit}>
                 <h2>Acesse o sistema</h2>
-                    <div>
+                    <div className='input-field'>
                         <label >
                             <FaUser className='icon'/>
                             <input 
@@ -26,13 +26,13 @@ const Login = () => {
                             onChange={(e) => setUserName(e.target.value)}/>
                         </label>
                     </div>
-                    <div>
+                    <div className='input-field'>
                         <label >
                             <FaLock className='icon'/>
                             <input 
                             type="password" 
                             name="senha" 
-                            placeholder="senha" 
+                            placeholder="Senha" 
                             onChange={(e) => setPassWord(e.target.value)}/>
                         </label>
                     </div>
