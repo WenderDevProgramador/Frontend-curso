@@ -4,6 +4,7 @@ import { FiSend } from 'react-icons/fi'
 import ReviewForm from './Components/ReviewForm'
 import Thanks from './Components/Thanks'
 import UserForm from './Components/UserForm'
+import Step from './Components/Step'
 
 //Hooks
 
@@ -11,6 +12,7 @@ import { useForm } from './hooks/useForm'
 
 
 import './App.css'
+
 
 function App() {
 
@@ -28,8 +30,9 @@ function App() {
           Ficamos felizes com a sua compra, últilize o formulário abaixo para avaliar o produto
         </p>
       </div>
+      
       <div className="form-container">
-        <p>etapas</p>
+        <Step currentStep={currentStep}/>
         <form onSubmit={(e) => changeStep(currentStep + 1, e)}>
           <div className="inputs-container">
             {currentComponent}

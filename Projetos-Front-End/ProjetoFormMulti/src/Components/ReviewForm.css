@@ -1,0 +1,54 @@
+.form-control.score-container {
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.form-container svg {
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container svg:hover {
+    fill: #7076f4;
+}
+
+.score-container input:checked ~ svg {
+    fill: #7076f4;
+}
+
+.radio-container {
+    text-align: center;
+    position: relative;
+}
+
+.radio-container input {
+    opacity: 0;
+    position: absolute;
+    top: 15px;
+    left: 17px;
+}
+
+.radio-container p {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.65rem;
+    margin-top: 0.4rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .form-control.score-container {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .form-container svg {
+        font-size: 1.2rem;
+    }
+
+    .radio-container p {
+        font-size: 0.6rem;
+    }
+}

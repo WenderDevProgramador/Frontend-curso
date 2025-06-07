@@ -1,0 +1,53 @@
+.thanks-container {
+    text-align: center;
+    padding: 1rem;
+}
+
+.thanks-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.thanks-container p {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+}
+
+.thanks-container h3 {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.review-data {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.review-data svg {
+    margin-left: 5px;
+    font-size: 1.1rem;
+}
+
+.review-data span {
+    font-weight: bold;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .thanks-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .thanks-container p {
+        font-size: 0.8rem;
+    }
+
+    .thanks-container h3 {
+        font-size: 1rem;
+    }
+
+    .review-data svg {
+        font-size: 1rem;
+    }
+}

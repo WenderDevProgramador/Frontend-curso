@@ -1,0 +1,56 @@
+.steps {
+    position: relative;
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 360px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.steps::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 0;
+}
+
+.step {
+    text-align: center;
+    background-color: #fff;
+    z-index: 1;
+    width: 100px;
+    padding: 0.4rem;
+}
+
+.step svg {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.active > svg {
+    fill: #7076f4;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .steps {
+        gap: 1.5rem;
+    }
+
+    .step {
+        width: 80px;
+    }
+
+    .step svg {
+        font-size: 1.2rem;
+    }
+}
