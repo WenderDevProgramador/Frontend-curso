@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "name": "capa de chuva",
+      "price": "50.50",
+      "id": 5
+    },
+    {
+      "name": "teclado",
+      "price": "110",
+      "id": 6
+    },
+    {
+      "name": "cadeira",
+      "price": "200",
+      "id": 7
+    },
+    {
+      "id": "018c",
+      "name": "Luva",
+      "price": "2.50"
+    },
+    {
+      "id": "b109",
+      "name": "caneta",
+      "price": "5"
+    },
+    {
+      "id": "00fa",
+      "name": "smart phone",
+      "price": "2000"
+    },
+    {
+      "id": "ddcd",
+      "name": "smart phone",
+      "price": "2000"
+    },
+    {
+      "id": "b8b2",
+      "name": "smart phone",
+      "price": "2000"
+    },
+    {
+      "id": "9f12",
+      "name": "smart phone",
+      "price": "2000"
+    }
+  ]
+}
