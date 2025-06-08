@@ -1,6 +1,6 @@
 
 
-const UserForm = () => {
+const UserForm = ({data, updateFieldHandler}) => {
     return (
         <div>
             <div className="form-control">
@@ -10,7 +10,9 @@ const UserForm = () => {
                     name="text"
                     id="name"
                     placeholder="Digite o seu nome"
-                    required />
+                    required 
+                    value={data.name || ''}
+                    onChange={(e) => updateFieldHandler('name',e.target.value.toUpperCase())}/>
 
             </div>
 
@@ -22,7 +24,9 @@ const UserForm = () => {
                     name="email"
                     id="email"
                     placeholder="Digite o seu email"
-                    required />
+                    required 
+                    value={data.email || ''}
+                    onChange={(e) => updateFieldHandler('email',e.target.value)}/>
 
 
             </div>
