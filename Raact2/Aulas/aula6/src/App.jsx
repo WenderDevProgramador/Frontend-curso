@@ -49,6 +49,9 @@ function App() {
     const addedProduct = await res.json()
 
     setProducts((prevProducts) => [...prevProducts, addedProduct])
+
+    setName('')
+    setPrice('')
   }
 
 
@@ -67,14 +70,16 @@ function App() {
             <span>Nome: </span>
             <input type="text"
               value={name}
-              onChange={(e) => setName(e.target.value)} />
+              onChange={(e) => setName(e.target.value)} 
+              required/>
           </label>
 
           <label>
             <span>Preço: </span>
             <input type="text"
               value={price}
-              onChange={(e) => setPrice(e.target.value)} />
+              onChange={(e) => setPrice(e.target.value)} 
+              required/>
           </label>
           <input type="submit" value="Enviar" />
         </form>
