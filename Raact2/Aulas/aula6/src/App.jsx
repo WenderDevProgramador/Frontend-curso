@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
+import { useFetch } from './hooks/useFetch'
 
 
 import './App.css'
+
 
 const url = 'http://localhost:3000/products'
 
@@ -11,17 +13,8 @@ function App() {
   // 1 - Resgatando dados
   const [products, setProducts] = useState([])
 
-  useEffect(() => {
-    async function getData() {
-      const res = await fetch(url)
 
-      const data = await res.json()
-
-      setProducts(data)
-    }
-
-    getData()
-  }, [])
+  const {data: items}  = useFetch(url)
 
   // Envio de dados
 
@@ -60,7 +53,8 @@ function App() {
       <h2>Requisições HTTP</h2>
       {/* Resgate de dados */}
       <ul>
-        {products.map((product) => <li key={product.id}>{product.name} - R$ {product.price}</li>)}
+        {items && 
+        items.map((product) => <li key={product.id}>{product.name} - R$ {product.price}</li>)}
       </ul>
       {/* Enviando dados */}
 
