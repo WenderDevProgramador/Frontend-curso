@@ -1,0 +1,34 @@
+{
+    "products": [
+        {
+            "id": "1682",
+            "name": "caneta",
+            "price": "2",
+            "quantity": "100"
+        },
+        {
+            "id": "1682",
+            "name": "caneta",
+            "price": "2",
+            "quantity": "100"
+        },
+        {
+            "id": "1682",
+            "name": "caneta",
+            "price": "2",
+            "quantity": "100"
+        },
+        {
+            "id": "1682",
+            "name": "caneta",
+            "price": "2",
+            "quantity": "100"
+        },
+        {
+            "id": "1682",
+            "name": "caneta",
+            "price": "2",
+            "quantity": "100"
+        }
+    ]
+}
