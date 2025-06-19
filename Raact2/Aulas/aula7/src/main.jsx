@@ -8,6 +8,8 @@ import Contact from './routes/Contact.jsx';
 import ErrorPage from './routes/ErrorPage.jsx';
 import Home from './routes/Home.jsx';
 import Historia from './routes/Historia.jsx'
+import Products from './routes/Products.jsx';
+import Info from './routes/Info.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,20 @@ const router = createBrowserRouter([
         path: 'historia',
         element: <Historia />,
       },
+
+      //Rota dinamica
+      {
+        path: 'products/:id',
+        element: <Products/>
+      },
+
+      // Rotas aninhadas 
+
+      {
+        path: 'product/:id/info',
+        element: <Info/>
+      }
+
 
     ]
   },

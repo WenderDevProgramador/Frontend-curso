@@ -1,6 +1,8 @@
 //Carregamento de dados
 
 import {useFetch} from '../hooks/useFetch'
+//Rota dinamica
+import { Link } from 'react-router-dom'
 
 const url = 'http://localhost:3000/products'
 
@@ -15,6 +17,8 @@ const Home = () => {
                     <li key={item.id}>
                         <h2>{item.name}</h2>
                         <p>R$: {item.price}</p>
+                        {/* Rota dinamica */}
+                        <Link to={`/products/${item.id}`}>Detalhes</Link>
                     </li>
                 ))}
 

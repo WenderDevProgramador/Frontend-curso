@@ -1,34 +1,34 @@
 {
     "products": [
         {
-            "id": "1682",
-            "name": "caneta",
+            "id": "1",
+            "name": "lapis",
+            "price": "1",
+            "quantity": "100"
+        },
+        {
+            "id": "2",
+            "name": "borracha",
             "price": "2",
             "quantity": "100"
         },
         {
-            "id": "1682",
-            "name": "caneta",
-            "price": "2",
+            "id": "3",
+            "name": "estojo",
+            "price": "10",
+            "quantity": "20"
+        },
+        {
+            "id": "4",
+            "name": "lapiseira",
+            "price": "4",
             "quantity": "100"
         },
         {
-            "id": "1682",
-            "name": "caneta",
-            "price": "2",
-            "quantity": "100"
-        },
-        {
-            "id": "1682",
-            "name": "caneta",
-            "price": "2",
-            "quantity": "100"
-        },
-        {
-            "id": "1682",
-            "name": "caneta",
-            "price": "2",
-            "quantity": "100"
+            "id": "5",
+            "name": "caderno",
+            "price": "20",
+            "quantity": "1"
         }
     ]
 }
