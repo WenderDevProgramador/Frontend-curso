@@ -15,12 +15,14 @@ import { QuizContext } from '../context/quiz'
 import './Welcome.css'
 
 const Welcome = () => {
-    const quizState = useContext(QuizContext)
+
+    const [quizState, dispatch] = useContext(QuizContext)
+
     return (
         <div id='welcome'>
             <h2>Sejá bem vindo</h2>
             <p>Clique no botão para começar:</p>
-            <button>Iniciar</button>
+            <button onClick={() => dispatch({type:'CHANGE_STATE'})}>Iniciar</button>
             <img src={Quiz} alt="Inicio quiz" />
             
             
