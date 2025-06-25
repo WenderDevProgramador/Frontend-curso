@@ -6,8 +6,7 @@
   color: #fff;
 }
 
-body,
-html {
+body{
   padding: 0.5rem;
   min-height: 100vh;
   height: 100%;
@@ -34,5 +33,29 @@ button {
 
 button:hover {
   background: linear-gradient(90deg, rgba(184, 84, 232, 1) 0%, rgba(132, 53, 222, 1) 100%);
+}
+
+/* Tablets pequenos (768px a 991px) */
+/* Telas pequenas (menores que 768px) */
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  img {
+    max-width: 320px;
+  }
+}
+
+/* Tablets grandes e laptops pequenos (992px a 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  img {
+    max-width: 480px;
+  }
+}
+
+/* Desktops padrão (1200px em diante) */
+@media (min-width: 1200px) {
+  img {
+    max-width: 640px;
+  }
 }
 
