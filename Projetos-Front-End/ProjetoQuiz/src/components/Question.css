@@ -1,19 +1,38 @@
 #question {
     text-align: center;
+    width: 100%;
     max-width: 500px;
     background-color: #8435de;
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 1rem;
+    /* REMOVA ISSO: overflow-y: auto; */
 }
 
-#question h2, #question p {
-    margin-bottom: 1.5rem;
+
+#question h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 #question p {
+    font-size: 1rem;
     margin-bottom: 1rem;
 }
 
 #question button {
-    border: 3px solid #fff ;
+    border: 3px solid #fff;
+}
+
+
+@media (min-width: 768px) {
+
+
+    #question h2 {
+        font-size: 1.5rem;
+    }
+
+    #question p,
+    .option {
+        font-size: 1rem;
+    }
 }

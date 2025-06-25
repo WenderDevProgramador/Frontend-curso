@@ -1,18 +1,25 @@
 .option {
     background-color: #3c0e70;
-    border-radius: .5rem;
-    padding: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
     margin-bottom: 1rem;
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.85;
     transition: 0.4s;
+    font-size: 0.95rem;
 }
 
-.option:hover{
+.option:hover {
     opacity: 1;
 }
 
-
 #options-container .option p {
     margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .option {
+        padding: 1rem;
+    }
 }
