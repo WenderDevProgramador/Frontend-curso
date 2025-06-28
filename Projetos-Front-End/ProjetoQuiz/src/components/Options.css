@@ -18,6 +18,20 @@
     font-size: 0.9rem;
 }
 
+.correct  {
+    background-color: #0bfc03;
+    font-weight: bold;
+}
+
+.wrong {
+    background-color: #3c0e70;
+    opacity: .4;
+}
+
+.hide {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .option {
         padding: 1rem;

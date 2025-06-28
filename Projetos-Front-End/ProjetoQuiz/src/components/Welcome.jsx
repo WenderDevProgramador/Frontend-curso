@@ -22,7 +22,7 @@ const Welcome = () => {
         <div id='welcome'>
             <h2>Sejá bem vindo</h2>
             <p>Clique no botão para começar:</p>
-            <button onClick={() => dispatch({type:'CHANGE_STATE'})}>Iniciar</button>
+            <div><button onClick={() => dispatch({type:'CHANGE_STATE'})}>Iniciar</button></div>
             <img src={Quiz} alt="Inicio quiz" />
             
             
