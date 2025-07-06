@@ -12,6 +12,10 @@ import Home from './routes/Home.jsx';
 
 import { CounterContextProvider } from './context/CounterContext.jsx';
 
+//Contexto mais complexo 
+
+import { TitleColorContextProvider } from './context/TitleColorContext.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -28,7 +32,7 @@ const router = createBrowserRouter([
         path: 'contact',
         element: <Contact />,
       },
-      
+
 
     ]
   },
@@ -38,7 +42,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <CounterContextProvider>
-      <RouterProvider router={router} />
+      <TitleColorContextProvider>
+        <RouterProvider router={router} />
+      </TitleColorContextProvider>
     </CounterContextProvider>
   </StrictMode>,
 )

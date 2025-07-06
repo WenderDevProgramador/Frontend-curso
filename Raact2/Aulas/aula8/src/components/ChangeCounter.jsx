@@ -10,10 +10,16 @@ const ChangeCounter = () => {
         setCounter( counter + 1);
     };
 
+    const handleClickMenos = () => {
+        setCounter( counter - 1);
+    };
+
 
     return (
         <div>
             <button type="button" onClick={handleClick}>Incrementar</button>
+
+            <button type="button" onClick={handleClickMenos}>Retirar</button>
         </div>
         
     )
