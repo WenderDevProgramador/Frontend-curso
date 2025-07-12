@@ -1,17 +1,15 @@
+import { RouterProvider } from 'react-router-dom';
+import router from './router';
 
-import { RouterProvider } from 'react-router-dom'
-import router from './router'
-
-import './App.css'
+import './App.css';
+import { StockContextProvider } from './context/StockContext'; 
 
 function App() {
-
-
   return (
-    <>
-    <RouterProvider router={router}/>
-    </>
-  )
+    <StockContextProvider>
+      <RouterProvider router={router} />
+    </StockContextProvider>
+  );
 }
 
-export default App
+export default App;

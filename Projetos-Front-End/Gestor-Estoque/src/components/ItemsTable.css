@@ -1,0 +1,20 @@
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    text-align: left;
+    border: #fff solid 1px;
+}
+
+
+
+
+
