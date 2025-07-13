@@ -6,6 +6,7 @@ export default function ItemsTable() {
     const { items } = useStock();
 
     return (
+        <div className="table-container">
         <table>
             <thead>
                 <tr>
@@ -19,11 +20,12 @@ export default function ItemsTable() {
             <tbody>
                 {Array.isArray(items) && items.map((item) => (
                     <tr key={item.id}>
-                        <td>{item.id}</td>
+                        <td className="id">{item.id}</td>
                         <td>{item.name}</td>
                         <td>{item.quantity} unid.</td>
                         <td>{item.category}</td>
-                        <td>
+                        <td className="ajustar">
+                        
                             <Link to={`/items/${item.id}`} className="button is-primary is-small">
                                 Ver
                             </Link>
@@ -35,5 +37,7 @@ export default function ItemsTable() {
                 ))}
             </tbody>
         </table>
+
+        </div>
     );
 }

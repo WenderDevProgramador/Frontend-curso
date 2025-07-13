@@ -1,5 +1,7 @@
+import ItemForm from "../../components/ItemForm";
+
 export default function CreateItems() {
     return (
-        <h2>Novo item</h2>
+        <ItemForm />
     );
 }

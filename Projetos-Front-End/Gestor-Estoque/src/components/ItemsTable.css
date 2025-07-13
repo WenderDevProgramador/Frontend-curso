@@ -1,20 +1,101 @@
-/* Tabela */
+/* Container responsivo da tabela */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Tabela base para mobile */
 table {
     width: 100%;
+    min-width: 500px;
     border-collapse: collapse;
     background-color: #1e1e1e;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 8px rgba(174, 174, 174, 0.2);
 }
 
+/* Cabeçalho e células base */
 th,
 td {
-    padding: 12px;
-    border-bottom: 1px solid #333;
+    font-size: 0.7rem;
+    padding: 5px;
+    border: 1px solid #fff;
     text-align: left;
-    border: #fff solid 1px;
 }
 
+.id {
+    font-size: 0.6rem;
+}
 
+/* Estilo para células */
+td {
+    background-color: #1e1e2f;
+    color: #e0e0e0;
+}
 
+/* Botões base (mobile) */
+.button {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    background-color: #444;
+    display: block;
+    width: 100%;
+    margin: 4px 0;
+    transition: background-color 0.2s ease;
+}
 
+/* Botão primário */
+.button.is-primary {
+    background-color: #007acc;
+}
 
+.button.is-primary:hover {
+    background-color: #005f99;
+}
+
+/* Hover padrão */
+.button:hover {
+    background-color: #666;
+}
+
+.ajustar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Botões lado a lado em telas maiores */
+@media (min-width: 480px) {
+    .button {
+        display: inline-block;
+        text-align: center;
+        max-width:80px;
+        margin: 4px 0;
+    }
+
+    .button+.button {
+        margin-left: 0.5rem;
+    }
+}
+
+/* Aumenta a legibilidade em telas maiores */
+@media (min-width: 768px) {
+
+    th,
+    td {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .button {
+        font-size: 0.875rem;
+        padding: 0.4rem 0.75rem;
+        max-width: 110px;
+        
+    }
+}

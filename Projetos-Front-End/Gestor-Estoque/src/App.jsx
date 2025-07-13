@@ -6,9 +6,12 @@ import { StockContextProvider } from './context/StockContext';
 
 function App() {
   return (
+    <main className="app">
     <StockContextProvider>
       <RouterProvider router={router} />
     </StockContextProvider>
+    </main>
+    
   );
 }
 
