@@ -33,29 +33,48 @@ td {
 }
 
 /* Botões base (mobile) */
-.button {
-    font-size: 0.75rem;
-    padding: 0.3rem 0.6rem;
+.buttonP {
+    background-color: rgb(74, 74, 139);
+    color: #fff;
+    padding: .4rem;
     border-radius: 6px;
     border: none;
-    cursor: pointer;
     text-decoration: none;
+}
+
+
+
+.buttonP:hover {
+    background-color: #4596c9;
+}
+
+.buttonBlack {
+    background-color: rgb(34, 34, 209);
     color: #fff;
-    background-color: #444;
-    display: block;
-    width: 100%;
-    margin: 4px 0;
-    transition: background-color 0.2s ease;
+    
+    padding: .4rem;
+    border-radius: 6px;
+    text-decoration: none;
+    
 }
 
-/* Botão primário */
-.button.is-primary {
-    background-color: #007acc;
+.buttonBlack:hover {
+    background-color: rgb(20, 20, 188);
+
 }
 
-.button.is-primary:hover {
-    background-color: #005f99;
+.delete-button {
+    background-color: #d9534f;
+    color: #fff;
+    padding: .3rem;
+    border-radius: 6px;
+    border: none;
 }
+
+.delete-button:hover {
+    background-color: #c9302c;
+}
+
 
 /* Hover padrão */
 .button:hover {

@@ -38,6 +38,7 @@ export default function ItemForm({ itemToUpdate }) {
                 addItem(validItem)
                 setItem(defaultItem)
                 alert("Item cadastrado com sucesso!")
+                inputRef.current.focus()
             }
         } catch (err) {
             console.log(err.message)

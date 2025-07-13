@@ -42,15 +42,16 @@ header nav {
 footer {
     background-color: #1a1a1a;
     color: white;
-    padding: 0.5rem;
+    padding: 0.3rem;
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.4rem;
     margin-top: auto;
     /* faz o footer colar no final */
 }
 
 footer p {
     margin: 0;
+    background-color: #1a1a1a;
 }
 
 footer a {
