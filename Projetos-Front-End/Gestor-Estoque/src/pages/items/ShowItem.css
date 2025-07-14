@@ -1,0 +1,56 @@
+/* Tema escuro para o item */
+.item {
+    
+    color: #f1f1f1;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem auto;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.353);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título */
+.item h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.buttonATU {
+    margin-right: 1rem;
+    text-decoration: none;
+    background-color: rgb(41, 41, 135);
+    color: #ffffff;
+    padding: .4rem;
+    border-radius: 5px;
+    font-size: .9rem;
+}
+
+.buttonATU:hover {
+    background-color: rgb(61, 61, 155);
+}
+
+
+
+/* Informações em linha */
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+/* Texto de descrição */
+.item p {
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsivo: layout horizontal em telas maiores */
+@media (min-width: 600px) {
+    .row {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

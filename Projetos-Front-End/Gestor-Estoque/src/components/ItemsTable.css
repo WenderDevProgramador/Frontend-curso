@@ -6,8 +6,8 @@
 
 /* Tabela base para mobile */
 table {
-    width: 100%;
-    min-width: 500px;
+    
+    min-width: 100%;
     border-collapse: collapse;
     background-color: #1e1e1e;
     box-shadow: 0 0 8px rgba(174, 174, 174, 0.2);

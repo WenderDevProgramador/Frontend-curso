@@ -1,10 +1,94 @@
-
 import './Home.css'
+import { Link } from "react-router-dom"
+import useStock from "../hooks/useStock"
 
 export default function Home() {
+    const { items } = useStock()
+
+    const diversity = items.length
+    const inventoryTotal = items.reduce((sum, item) => +sum + +item.quantity, 0)
+
+    const today = new Date()
+    const limitDate = new Date()
+    limitDate.setDate(limitDate.getDate() - 10)
+    const recentItems = items.filter((item) => item.createdAt >= limitDate && item.createdAt <= today)
+    const recentTotal = recentItems.length
+
+    const lowQuantityItems = items.filter((item) => item.quantity < 10)
+    const lowQuantityTotal = lowQuantityItems.length
+
     return (
-        <div className="home">
-            <h1>DashBoard</h1>
-        </div>
-    );
+        <main>
+            <h1>Dashboard</h1>
+
+            <div className="row">
+                <div className="dashboard-card">
+                    Diversidade de itens
+                    <span>{diversity}</span>
+                </div>
+                <div className="dashboard-card">
+                    Inventário total
+                    <span>{inventoryTotal}</span>
+                </div>
+                <div className="dashboard-card">
+                    Itens recentes
+                    <span>{recentTotal}</span>
+                </div>
+                <div className="dashboard-card">
+                    Itens acabando
+                    <span>{lowQuantityTotal}</span>
+                </div>
+            </div>
+
+            <div className="row">
+                {/* Itens Recentes */}
+                <div className="recent">
+                    <h2>Itens Recentes</h2>
+                    <div className="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {recentItems.map((item) => (
+                                    <tr key={item.id}>
+                                        <td>{item.name}</td>
+                                        <td><Link to={`/items/${item.id}`} className="button is-small">Ver</Link></td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                {/* Itens Acabando */}
+                <div className="low">
+                    <h2>Itens Acabando</h2>
+                    <div className="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Qtd.</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {lowQuantityItems.map((item) => (
+                                    <tr key={item.id}>
+                                        <td>{item.name}</td>
+                                        <td>{item.quantity}</td>
+                                        <td><Link to={`/items/${item.id}`} className="button is-small">Ver</Link></td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    )
 }

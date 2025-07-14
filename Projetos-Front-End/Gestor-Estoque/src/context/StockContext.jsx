@@ -49,6 +49,8 @@ export function StockContextProvider({ children }) {
         })
     }
 
+    
+
 
 
     const stock = {
