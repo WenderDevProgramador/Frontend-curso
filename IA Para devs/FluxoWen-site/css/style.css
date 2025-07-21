@@ -1,0 +1,42 @@
+:root {
+    --azul-marinho: #1E2A38;
+    --azul-claro: #4A90E2;
+    --cinza-neutro: #D9D9D9;
+    --branco: #FFFFFF;
+    --verde-suave: #A8DAB5;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--branco);
+    color: var(--azul-marinho);
+}
+
+section {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-story {
+    border-left: 5px solid var(--azul-claro);
+    padding: 20px;
+    background-color: var(--cinza-neutro);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.card-story:hover {
+    background-color: var(--verde-suave);
+    transform: translateY(-3px);
+}
